@@ -1,0 +1,8 @@
+:doctitle: docops/adr
+
+== Overview
+
+
+== License
+
+include::LICENSE[]
