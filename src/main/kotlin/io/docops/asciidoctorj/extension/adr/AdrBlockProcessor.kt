@@ -41,12 +41,20 @@ class AdrBlockProcessor : BlockProcessor() {
         } catch (e: Exception) {
             errorReport(e.message, config = config)
         }
+        val imgDir = parent.document.getAttribute("imagesdir")
+        var target = "images/${filename}.svg"
+        if (imgDir != null) {
+            target = "${filename}.svg"
+        }
         val svg = File("${reader.dir}/images/${filename}.svg")
-        svg.parentFile.mkdirs()
+        val p = svg.parentFile
+        if(!p.exists()) {
+            p.mkdirs()
+        }
         svg.writeBytes(imgSrc.toByteArray())
         val blockAttrs = mutableMapOf<String, Any>(
-            "role" to "docops.io.stackbar",
-            "target" to "${filename}.svg",
+            "role" to "docops.io.adr",
+            "target" to target,
             "alt" to "IMG not available",
             "title" to "Figure. $filename",
             "interactive-option" to "",
