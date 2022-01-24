@@ -175,6 +175,7 @@
             <artifactId>maven-deploy-plugin</artifactId>
             <version>3.0.0-M2</version>
             <type>maven-plugin</type>
+            <scope>provided</scope>
         </dependency>
 
         <dependency>
@@ -182,6 +183,7 @@
             <artifactId>maven-gpg-plugin</artifactId>
             <version>3.0.1</version>
             <type>maven-plugin</type>
+            <scope>provided</scope>
         </dependency>
 
     </dependencies>
