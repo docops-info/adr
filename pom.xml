@@ -8,6 +8,53 @@
     <packaging>jar</packaging>
 
     <name>adr</name>
+    <url>https://docops.io/adr/</url>
+
+    <organization>
+        <url>https://docops.io/</url>
+        <name>DocOps</name>
+    </organization>
+    <inceptionYear>2022</inceptionYear>
+
+    <licenses>
+        <license>
+            <name>The Apache License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <name>Steve roach</name>
+            <email>steve@docops.io</email>
+            <organization>DocOps</organization>
+            <organizationUrl>https://docops.io/</organizationUrl>
+            <timezone>America/New_York</timezone>
+        </developer>
+    </developers>
+
+    <scm>
+        <connection>scm:git:git://github.com/docops-info/adr</connection>
+        <developerConnection>scm:git:git@github.com:docops-info/adr.git</developerConnection>
+        <url>https://github.com/docops-info/adr</url>
+        <tag>adr-extension-2022.0</tag>
+    </scm>
+
+    <distributionManagement>
+        <snapshotRepository>
+            <id>ossrh</id>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+        </snapshotRepository>
+        <repository>
+            <id>ossrh</id>
+            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+        </repository>
+    </distributionManagement>
+
+    <issueManagement>
+        <system>Github</system>
+        <url>https://github.com/docops-info/adr/issues</url>
+    </issueManagement>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -119,6 +166,13 @@
                             <goal>jar</goal>
                         </goals>
                     </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>3.3.1</version>
+                <executions>
                     <execution>
                         <id>attach-javadoc</id>
                         <goals>
@@ -188,23 +242,9 @@
 
     </dependencies>
 
-    <distributionManagement>
-        <snapshotRepository>
-            <id>ossrh</id>
-            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-        </snapshotRepository>
-        <repository>
-            <id>ossrh</id>
-            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
-        </repository>
-    </distributionManagement>
 
-    <scm>
-        <connection>scm:git:git://github.com/docops-info/adr</connection>
-        <developerConnection>scm:git:git@github.com:docops-info/adr.git</developerConnection>
-        <url>https://github.com/docops-info/adr</url>
-        <tag>adr-extension-2022.0</tag>
-    </scm>
+
+
 
     <profiles>
         <!-- GPG Signature on release -->
