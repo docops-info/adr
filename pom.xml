@@ -33,9 +33,20 @@
         </developer>
     </developers>
 
+    <!--
     <scm>
-        <connection>scm:git:git://github.com/docops-info/adr</connection>
+        <connection>scm:git:git://github.com/docops-info/adr.git</connection>
         <developerConnection>scm:git:git@github.com:docops-info/adr.git</developerConnection>
+        <url>https://github.com/docops-info/adr</url>
+        <tag>adr-extension-2022.0</tag>
+        <tag>HEAD</tag>
+    </scm>
+    -->
+
+    <!-- ssh://git@git.jetbrains.space/docops/do/adr.git -->
+    <scm>
+        <connection>scm:git:git://git.jetbrains.space/docops/do/adr.git</connection>
+        <developerConnection>scm:git:git@git.jetbrains.space/docops/do/adr.git</developerConnection>
         <url>https://github.com/docops-info/adr</url>
         <tag>adr-extension-2022.0</tag>
     </scm>
@@ -74,6 +85,7 @@
         <sourceDirectory>src/main/kotlin</sourceDirectory>
         <testSourceDirectory>src/test/kotlin</testSourceDirectory>
         <plugins>
+            <!-- 2022-01-28 -->
             <plugin>
                 <groupId>org.jetbrains.kotlin</groupId>
                 <artifactId>kotlin-maven-plugin</artifactId>
@@ -95,16 +107,19 @@
                     </execution>
                 </executions>
             </plugin>
+            <!-- 2022-01-28 -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>2.22.2</version>
             </plugin>
+            <!-- 2022-01-28 -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-failsafe-plugin</artifactId>
                 <version>2.22.2</version>
             </plugin>
+            <!-- 2022-01-28 -->
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>exec-maven-plugin</artifactId>
@@ -113,6 +128,7 @@
                     <mainClass>MainKt</mainClass>
                 </configuration>
             </plugin>
+            <!-- 2022-01-28 -->
             <plugin>
                 <artifactId>maven-deploy-plugin</artifactId>
                 <version>3.0.0-M2</version>
@@ -126,6 +142,7 @@
                     </execution>
                 </executions>
             </plugin>
+            <!-- 2022-01-28 -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-release-plugin</artifactId>
@@ -144,6 +161,7 @@
                     </dependency>
                 </dependencies>
             </plugin>
+            <!-- 2022-01-28 -->
             <plugin>
                 <groupId>org.sonatype.plugins</groupId>
                 <artifactId>nexus-staging-maven-plugin</artifactId>
@@ -155,6 +173,7 @@
                     <autoReleaseAfterClose>true</autoReleaseAfterClose>
                 </configuration>
             </plugin>
+            <!-- 2022-01-28 -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-source-plugin</artifactId>
@@ -168,6 +187,7 @@
                     </execution>
                 </executions>
             </plugin>
+            <!-- 2022-01-28 -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>
@@ -207,7 +227,7 @@
         <dependency>
             <groupId>org.jetbrains.kotlin</groupId>
             <artifactId>kotlin-stdlib-jdk8</artifactId>
-            <version>1.6.0</version>
+            <version>1.6.10</version>
         </dependency>
         <!-- https://mvnrepository.com/artifact/org.asciidoctor/asciidoctorj -->
         <dependency>
