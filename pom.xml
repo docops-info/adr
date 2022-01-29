@@ -33,23 +33,23 @@
         </developer>
     </developers>
 
-    <!--
     <scm>
         <connection>scm:git:git://github.com/docops-info/adr.git</connection>
         <developerConnection>scm:git:git@github.com:docops-info/adr.git</developerConnection>
         <url>https://github.com/docops-info/adr</url>
-        <tag>adr-extension-2022.0</tag>
+<!--        <tag>adr-extension-2022.0</tag>-->
         <tag>HEAD</tag>
     </scm>
-    -->
 
     <!-- ssh://git@git.jetbrains.space/docops/do/adr.git -->
+    <!--
     <scm>
         <connection>scm:git:git://git.jetbrains.space/docops/do/adr.git</connection>
         <developerConnection>scm:git:git@git.jetbrains.space/docops/do/adr.git</developerConnection>
         <url>https://github.com/docops-info/adr</url>
         <tag>adr-extension-2022.0</tag>
     </scm>
+    -->
 
     <distributionManagement>
         <snapshotRepository>
