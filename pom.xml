@@ -4,11 +4,12 @@
 
     <groupId>io.docops</groupId>
     <artifactId>adr-extension</artifactId>
-    <version>2022.1-SNAPSHOT</version>
+    <version>2022.0</version>
     <packaging>jar</packaging>
 
     <name>adr</name>
     <url>https://docops.io/adr/</url>
+    <description>An AsciiDoctorJ extension that formats a Git Architectural Decision Record into an asciidoc artifact.</description>
 
     <organization>
         <url>https://docops.io/</url>
@@ -29,7 +30,7 @@
             <email>steve@docops.io</email>
             <organization>DocOps</organization>
             <organizationUrl>https://docops.io/</organizationUrl>
-            <timezone>America/New_York</timezone>
+<!--            <timezone>America/New_York</timezone>-->
         </developer>
     </developers>
 
@@ -38,7 +39,7 @@
         <developerConnection>scm:git:git@github.com:docops-info/adr.git</developerConnection>
         <url>https://github.com/docops-info/adr</url>
 <!--        <tag>adr-extension-2022.0</tag>-->
-        <tag>HEAD</tag>
+<!--        <tag>HEAD</tag>-->
     </scm>
 
     <!-- ssh://git@git.jetbrains.space/docops/do/adr.git -->
@@ -72,6 +73,7 @@
         <kotlin.code.style>official</kotlin.code.style>
         <kotlin.compiler.jvmTarget>1.8</kotlin.compiler.jvmTarget>
         <kotlin.version>1.6.10</kotlin.version>
+        <dokka-version>0.9.15</dokka-version>
     </properties>
 
     <repositories>
@@ -169,7 +171,7 @@
                 <extensions>true</extensions>
                 <configuration>
                     <serverId>ossrh</serverId>
-                    <nexusUrl>https://oss.sonatype.org/</nexusUrl>
+                    <nexusUrl>https://s01.oss.sonatype.org/</nexusUrl>
                     <autoReleaseAfterClose>true</autoReleaseAfterClose>
                 </configuration>
             </plugin>
@@ -188,20 +190,43 @@
                 </executions>
             </plugin>
             <!-- 2022-01-28 -->
+<!--            <plugin>-->
+<!--                <groupId>org.apache.maven.plugins</groupId>-->
+<!--                <artifactId>maven-javadoc-plugin</artifactId>-->
+<!--                <version>3.3.1</version>-->
+<!--                <executions>-->
+<!--                    <execution>-->
+<!--                        <id>attach-javadoc</id>-->
+<!--                        <goals>-->
+<!--                            <goal>jar</goal>-->
+<!--                        </goals>-->
+<!--                    </execution>-->
+<!--                </executions>-->
+<!--            </plugin>-->
             <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-javadoc-plugin</artifactId>
-                <version>3.3.1</version>
+                <groupId>org.jetbrains.dokka</groupId>
+                <artifactId>dokka-maven-plugin</artifactId>
+<!--                <version>${dokka.version}</version>-->
+                <version>1.6.10</version>
                 <executions>
                     <execution>
-                        <id>attach-javadoc</id>
+                        <phase>pre-site</phase>
                         <goals>
-                            <goal>jar</goal>
+                            <goal>dokka</goal>
                         </goals>
                     </execution>
                 </executions>
+                <configuration>
+                    <dokkaPlugins>
+                        <plugin>
+                            <groupId>org.jetbrains.dokka</groupId>
+                            <artifactId>kotlin-as-java-plugin</artifactId>
+<!--                            <version>${dokka.version}</version>-->
+                            <version>1.6.10</version>
+                        </plugin>
+                    </dokkaPlugins>
+                </configuration>
             </plugin>
-
         </plugins>
     </build>
 
