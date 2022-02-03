@@ -130,6 +130,30 @@
                     <mainClass>MainKt</mainClass>
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>org.jetbrains.dokka</groupId>
+                <artifactId>dokka-maven-plugin</artifactId>
+<!--                <version>${dokka.version}</version>-->
+                <version>1.6.10</version>
+                <executions>
+                    <execution>
+                        <phase>pre-site</phase>
+                        <goals>
+                            <goal>dokka</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <dokkaPlugins>
+                        <plugin>
+                            <groupId>org.jetbrains.dokka</groupId>
+                            <artifactId>kotlin-as-java-plugin</artifactId>
+<!--                            <version>${dokka.version}</version>-->
+                            <version>1.6.10</version>
+                        </plugin>
+                    </dokkaPlugins>
+                </configuration>
+            </plugin>
             <!-- 2022-01-28 -->
             <plugin>
                 <artifactId>maven-deploy-plugin</artifactId>
@@ -190,42 +214,18 @@
                 </executions>
             </plugin>
             <!-- 2022-01-28 -->
-<!--            <plugin>-->
-<!--                <groupId>org.apache.maven.plugins</groupId>-->
-<!--                <artifactId>maven-javadoc-plugin</artifactId>-->
-<!--                <version>3.3.1</version>-->
-<!--                <executions>-->
-<!--                    <execution>-->
-<!--                        <id>attach-javadoc</id>-->
-<!--                        <goals>-->
-<!--                            <goal>jar</goal>-->
-<!--                        </goals>-->
-<!--                    </execution>-->
-<!--                </executions>-->
-<!--            </plugin>-->
             <plugin>
-                <groupId>org.jetbrains.dokka</groupId>
-                <artifactId>dokka-maven-plugin</artifactId>
-<!--                <version>${dokka.version}</version>-->
-                <version>1.6.10</version>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>3.3.1</version>
                 <executions>
                     <execution>
-                        <phase>pre-site</phase>
+                        <id>attach-javadoc</id>
                         <goals>
-                            <goal>dokka</goal>
+                            <goal>jar</goal>
                         </goals>
                     </execution>
                 </executions>
-                <configuration>
-                    <dokkaPlugins>
-                        <plugin>
-                            <groupId>org.jetbrains.dokka</groupId>
-                            <artifactId>kotlin-as-java-plugin</artifactId>
-<!--                            <version>${dokka.version}</version>-->
-                            <version>1.6.10</version>
-                        </plugin>
-                    </dokkaPlugins>
-                </configuration>
             </plugin>
         </plugins>
     </build>
