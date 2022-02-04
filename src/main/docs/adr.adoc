@@ -60,7 +60,7 @@ include::123.adr[]
 
 === Resulting ADR
 
-[adr,test3,border=false]
+[adr,test3,border=true]
 ----
 include::123.adr[]
 ----

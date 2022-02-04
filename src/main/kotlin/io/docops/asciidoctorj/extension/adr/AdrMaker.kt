@@ -39,31 +39,31 @@ class AdrMaker {
     private fun makeTitle(title: String): String {
         return """
      <text x="485" y="40" class="title" text-anchor="middle">$title</text>
-     <line x1="10" y1="45" x2="970" y2="45" stroke="#F0F1F4" />
+     <line x1="20" y1="45" x2="970" y2="45" stroke="#8B8B90" />
     """.trimIndent()
     }
     private fun makeButtons(adr: Adr): String {
 
         return """
      <g>
-        <rect x="90" y="50" fill="#568BBF" width="150" height="30" rx="5" ry="5" class="${adr.statusClass(adr.status,"Proposed")}"/>
-        <text x="165" y="70" text-anchor="middle" class="subtitle">Proposed</text>
+        <rect x="90" y="55" fill="#568BBF" width="150" height="30" rx="5" ry="5" class="${adr.statusClass(adr.status,"Proposed")}"/>
+        <text x="165" y="75" text-anchor="middle" class="subtitle">Proposed</text>
     </g>
     <g>
-        <rect x="250" y="50" fill="#53A551" width="150" height="30" rx="5" ry="5" class="${adr.statusClass(adr.status,"Accepted")}"/>
-        <text x="325" y="70" text-anchor="middle" class="subtitle">Accepted</text>
+        <rect x="250" y="55" fill="#53A551" width="150" height="30" rx="5" ry="5" class="${adr.statusClass(adr.status,"Accepted")}"/>
+        <text x="325" y="75" text-anchor="middle" class="subtitle">Accepted</text>
     </g>
     <g>
-        <rect x="410" y="50" fill="#F5C344" width="150" height="30" rx="5" ry="5" class="${adr.statusClass(adr.status,"Superseded")}"/>
-        <text x="485" y="70" text-anchor="middle" class="subtitle">Superseded</text>
+        <rect x="410" y="55" fill="#F5C344" width="150" height="30" rx="5" ry="5" class="${adr.statusClass(adr.status,"Superseded")}"/>
+        <text x="485" y="75" text-anchor="middle" class="subtitle">Superseded</text>
     </g>
     <g>
-        <rect x="570" y="50" fill="#F5C344" width="150" height="30" rx="5" ry="5" class="${adr.statusClass(adr.status,"Deprecated")}"/>
-        <text x="645" y="70" text-anchor="middle" class="subtitle">Deprecated</text>
+        <rect x="570" y="55" fill="#F5C344" width="150" height="30" rx="5" ry="5" class="${adr.statusClass(adr.status,"Deprecated")}"/>
+        <text x="645" y="75" text-anchor="middle" class="subtitle">Deprecated</text>
     </g>
     <g>
-        <rect x="730" y="50" fill="#CB444A" width="150" height="30" rx="5" ry="5" class="${adr.statusClass(adr.status,"Rejected")}"/>
-        <text x="805" y="70" text-anchor="middle" class="subtitle">Rejected</text>
+        <rect x="730" y="55" fill="#CB444A" width="150" height="30" rx="5" ry="5" class="${adr.statusClass(adr.status,"Rejected")}"/>
+        <text x="805" y="75" text-anchor="middle" class="subtitle">Rejected</text>
     </g>
         """.trimIndent()
     }
@@ -77,7 +77,7 @@ class AdrMaker {
         <tspan class="status">Status </tspan>
         <tspan x="20" dy="30" class="content">${adr.status}</tspan>
     </text>
-    <line x1="10" y1="145" x2="970" y2="145" stroke="#F0F1F4" />
+    <line x1="20" y1="145" x2="970" y2="145" stroke="#8B8B90" />
         """.trimIndent()
     }
 
@@ -92,7 +92,7 @@ class AdrMaker {
             """
         }
         text += """</text>
-            <line x1="10" y1="${startY+5}" x2="970" y2="${startY+5}" stroke="#F0F1F4" />
+            <line x1="20" y1="${startY+5}" x2="970" y2="${startY+5}" stroke="#8B8B90" />
         """
         return text.trimIndent()
     }
@@ -106,7 +106,7 @@ class AdrMaker {
             text += """<tspan x="20" dy="30" class="content">$it</tspan>"""
         }
         text += """</text>
-            <line x1="10" y1="${startY+5}" x2="970" y2="${startY+5}" stroke="#F0F1F4" />
+            <line x1="20" y1="${startY+5}" x2="970" y2="${startY+5}" stroke="#8B8B90" />
         """
         return text.trimIndent()
     }
@@ -121,7 +121,7 @@ class AdrMaker {
             """
         }
         text += """</text>
-            <line x1="10" y1="${startY+5}" x2="970" y2="${startY+5}" stroke="#F0F1F4" />
+            <line x1="20" y1="${startY+5}" x2="970" y2="${startY+5}" stroke="#8B8B90" />
         """
         return text.trimIndent()
     }
@@ -168,7 +168,7 @@ class AdrMaker {
             fill: white;
         }
         .unselected {
-            opacity: 0.2;
+            opacity: 0.4;
         }
     </style>
     <rect id="myRect" x="10" y="0" width="970" height="97%" rx="5" ry="5"  fill="#fffefa"  class="card" $filter/>
