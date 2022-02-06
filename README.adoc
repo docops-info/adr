@@ -1,8 +1,46 @@
-:doctitle: docops/adr
 
-== Overview
+== Current Version: 2020.1
+
+== Maven
+----
+<dependency>
+  <groupId>io.docops</groupId>
+  <artifactId>adr-extension</artifactId>
+  <version>2022.1</version>
+</dependency>
+----
+
+== Gradle
+----
+implementation("io.docops:adr-extension:2022.1")
+----
+----
+implementation 'io.docops:adr-extension:2022.1'
+----
+
+== Source
+
+link:https://github.com/docops-info/adr[]
+
+== Download
+
+link:https://search.maven.org/remotecontent?filepath=io/docops/adr-extension/2022.1/adr-extension-2022.1.jar[adr-extension-2022.1.jar] [small]#link:https://repo1.maven.org/maven2/io/docops/adr-extension/2022.1/adr-extension-2022.1.jar.asc[[gpg sig\]]#
 
 
-== License
+== Document
 
-include::LICENSE[]
+link:https://docops.io/adr/adr.html[Architectural Decision Record (ADR) Extension]
+
+== History
+
+2022.1 - 2022-02-06::
+Clean up for public use
+
+2022.0 - 2022-02-03::
+Initial release to Maven Central.  Renders base Architectural Decision Record (ADR).
+
+== docops.io
+
+We are a group of product developers that have been challenged multiple times to unravel the task of large scale, multi-audience documentation.  We are developing a series of tools and services to lower the barriers of DocOps at any scale.  Often leveraging other open source projects from other amazing teams and fantastic engineers, we are developing the best documentation experience we can.
+
+link:https://docops.io/[docops.io]
