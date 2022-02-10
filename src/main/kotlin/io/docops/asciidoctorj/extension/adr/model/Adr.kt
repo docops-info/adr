@@ -27,10 +27,10 @@ data class Adr (
 )
 {
     fun statusClass(status: Status, current: String): String {
-        if(status == Status.valueOf(current)) {
-            return "selected"
+        return if(status == Status.valueOf(current)) {
+            "selected"
         } else {
-            return "unselected"
+            "unselected"
         }
     }
 }

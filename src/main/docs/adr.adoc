@@ -38,15 +38,17 @@ https://adr.github.io[ADR]
 Title:Arch decision Title <1>
 Date: November 24th, 2010 <2>
 Status: Proposed <3>
-Context: Setting the context here <4>
-Consequences: What are the consequences of the decision <5>
+Decision: What was the decision made <4>
+Context: Setting the context here <5>
+Consequences: What are the consequences of the decision <6>
 ....
 
 <1> Title for the record
 <2> Date for the record
 <3> Status can be 1 of (Proposed, Accepted, Superseded, Deprecated, Rejected)
-<4> Context
-<5> Consequences
+<4> Decision
+<5> Context
+<6> Consequences
 
 === First Example
 
